@@ -58,7 +58,7 @@ app.get('/weather', (req, res) => {
                 return res.send({ error })
                 } 
             weatherResponse = {
-                forecast: `${forecastData.description}. It is currently ${forecastData.temperature} degrees, but it feels like ${forecastData.feelslike} degrees out`,
+                forecast: `${forecastData.description}. It is currently ${forecastData.temperature} degrees, but it feels like ${forecastData.feelslike} degrees out. The wind is ${forecastData.windSpeed} knots coming from ${forecastData.windDir} direction, and we have a humidity of ${forecastData.humidity}%`,
                 location,
                 address: req.query.address
             }
